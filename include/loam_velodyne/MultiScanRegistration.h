@@ -88,12 +88,14 @@ public:
   /** Multi scan mapper for Velodyne HDL-64E according to data sheet. */
   static inline MultiScanMapper Velodyne_HDL_64E() { return MultiScanMapper(-24.9f, 2, 64); };
 
+  static inline MultiScanMapper Hesai40() { return MultiScanMapper(-16.f, 7, 40); };
+
 
 private:
   float _lowerBound;      ///< the vertical angle of the first scan ring
   float _upperBound;      ///< the vertical angle of the last scan ring
   uint16_t _nScanRings;   ///< number of scan rings
-  float _factor;          ///< linear interpolation factor
+  float _factor;          ///< lineadr interpolation factor
 };
 
 

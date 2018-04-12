@@ -98,7 +98,9 @@ bool MultiScanRegistration::setup(ros::NodeHandle& node,
       _scanMapper = MultiScanMapper::Velodyne_HDL_32();
     } else if (lidarName == "HDL-64E") {
       _scanMapper = MultiScanMapper::Velodyne_HDL_64E();
-    } else {
+    } else if (lidarName == "Hesai40") {
+      _scanMapper = MultiScanMapper::Hesai40();
+    } else{
       ROS_ERROR("Invalid lidar parameter: %s (only \"VLP-16\", \"HDL-32\" and \"HDL-64E\" are supported)", lidarName.c_str());
       return false;
     }
